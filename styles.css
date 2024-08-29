@@ -1,0 +1,531 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita rolagem suave */
+}
+
+/* O restante do CSS permanece o mesmo */
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f0f4f3; /* Fundo em tom de menta claro */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    max-height: 60px;
+    text-align: center;
+    /* padding: 20px; */
+    background-color: #8ed1c4; /* Menta suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    margin: auto;
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header:hover .logo {
+    transform: scale(1.3);
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    position: relative;
+    background-color: #8ed1c4; /* Verde escuro */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 10px solid #003b46; /* Borda inferior contrastante */
+    width: 100%;
+    height: 670px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima da imagem de fundo */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #f0f8f4;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: 700;
+    color: #d9ed92;
+    background-color: #003b46;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.hero-content .button {
+    background-color: #5aa89a;
+    font-family: 'Kanit', sans-serif;
+    border: solid 2px #FFF;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 0px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    animation: none;
+}
+
+.hero-content .button:hover {
+    background-color: #003b46;
+    color: #FFF;
+    border: solid 2px #FFF;
+    transform: scale(1.05);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* APLICAR IMAGEM DE FUNDO AQUI ----------------------------------------------------------------------------------------- */
+    /* background: url('Logo.png') no-repeat center center; */
+    background-size: cover;
+    opacity: 0.3; /* Opacidade da imagem de fundo */
+    z-index: 1; /* Garante que a imagem fique abaixo do texto */
+}
+
+.fa-chevron-down {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 2; /* Garante que o ícone fique acima da imagem de fundo */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-content .button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+
+            .hero .ani {
+                font-size: 20px;
+            }
+
+            .hero::before {
+                background-size: 150%; /* Diminui a imagem para telas médias */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 20px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .hero-content .button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .hero .ani {
+                font-size: 18px;
+            }
+
+            .hero::before {
+                background-size: 200%; /* Diminui a imagem para telas médias */
+            }
+        }
+
+.ani {
+    margin: 20px;
+    animation: bounceIn 1.5s ease-in-out infinite;
+}
+
+.cta-button {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: #6fc8b3; /* Botão em tom de menta */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 25px; /* Botões arredondados */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1.5s ease-in-out infinite; /* Animação de bounce */
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    background-color: #5aa89a; /* Menta escuro */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about, .portfolio, .contact {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out; /* Animação de fade-in-down */
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #6fc8b3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skills {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s ease-in-out; /* Animação de fade-in */
+}
+
+.skills li {
+    background-color: #a7e2d7;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills li i {
+    color: #6fc8b3;
+}
+
+.skills li:hover {
+    background-color: #8ed1c4;
+    transform: translateY(-5px);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Garante que os cards tenham uma largura mínima e ajusta o layout em colunas */
+    gap: 30px; /* Aumenta o espaço entre os cards */
+    justify-content: center; /* Centraliza os cards na grade */
+    padding: 0 20px; /* Adiciona espaçamento lateral */
+}
+
+.project-card {
+    background-color: #a7e2d7; /* Menta suave */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer; /* Mostrar que o card é clicável */
+    animation: pulse 2s infinite; /* Animação de pulsar */
+    min-height: 300px; /* Define uma altura mínima para garantir visibilidade do conteúdo */
+    width: 100%; /* Faz com que o card ocupe toda a largura disponível da coluna */
+    max-width: 400px; /* Define uma largura máxima para o card */
+    display: flex;
+    flex-direction: column; /* Faz com que o card expanda verticalmente */
+    justify-content: space-between; /* Distribui o espaço verticalmente */
+}
+
+.project-info {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.project-link-button {
+    display: none; /* Oculta o botão por padrão */
+    background-color: #6fc8b3; /* Botão em tom de menta */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px; /* Botões arredondados */
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link-button:hover {
+    background-color: #5aa89a; /* Menta escuro */
+    /* transform: translateY(-5px); */
+}
+
+.project-card:hover .project-link-button {
+    display: block; /* Exibe o botão quando o card é hoverado */
+}
+
+/* Efeito de escurecimento e botão ao passar o mouse */.project-card:hover {
+    filter: brightness(0.85); /* Escurecer o card ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento do card ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    border: 2px solid #5aa89a; /* Adiciona uma borda ao passar o mouse */
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 10px; /* Arredondar os cantos dos campos */
+    border: 2px solid #6fc8b3; /* Cor da borda */
+    background-color: #fff; /* Cor de fundo dos campos */
+    color: #333; /* Cor do texto padrão */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #8ed1c4; /* Cor da borda ao focar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #333; /* Cor do texto ao focar (mantém a cor do texto padrão) */
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #aaa; /* Cor do texto do placeholder */
+}
+
+.contact-form input:focus::placeholder, .contact-form textarea:focus::placeholder {
+    color: #6fc8b3; /* Cor do texto do placeholder ao focar */
+}
+
+
+
+.contact-form button {
+    padding: 15px;
+    background-color: #6fc8b3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+    background-color: #5aa89a;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1.5s ease-in-out; /* Animação de fade-in-up */
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #6fc8b3;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #5aa89a;
+    transform: scale(1.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #a7e2d7;
+    color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Certifica que o footer fica no fundo da página */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Ajusta a grade para uma coluna em telas menores */
+        gap: 40px; /* Reduz o espaçamento entre os cards */
+        padding: 0 10px; /* Adiciona espaçamento lateral */
+    }
+
+    .project-card {
+        width: 100%; /* Faz com que o card ocupe toda a largura disponível */
+        max-width: 100%; /* Remove a largura máxima para garantir a ocupação total */
+        min-height: 350px; /* Ajusta a altura mínima para os cards */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta a grade para dispositivos médios */
+        gap: 40px; /* Reduz o espaçamento entre os cards */
+        padding: 0 20px; /* Adiciona espaçamento lateral */
+    }
+
+    .project-card {
+        width: 100%; /* Faz com que o card ocupe toda a largura disponível */
+        max-width: 100%; /* Remove a largura máxima para garantir a ocupação total */
+        min-height: 350px; /* Ajusta a altura mínima para os cards */
+    }
+}
+
+@media (min-width: 1025px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adiciona flexibilidade para a grade */
+        gap: 40px; /* Ajusta o espaçamento entre os cards */
+        justify-content: center; /* Centraliza os cards */
+    }
+
+    .project-card {
+        width: 100%; /* Faz com que o card ocupe toda a largura disponível da coluna */
+        max-width: 400px; /* Define uma largura máxima para o card */
+        min-height: 400px; /* Ajusta a altura mínima para os cards */
+    }
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    height: 10px;
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Cor de fundo da trilha da barra de rolagem */
+    border-radius: 10px; /* Arredondar os cantos da trilha */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #003b46; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 10px; /* Arredondar os cantos do polegar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar quando estiver sobre ele */
+}
