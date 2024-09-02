@@ -1,0 +1,106 @@
+/* Responsive CSS */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-content .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .hero .ani {
+        font-size: 18px;
+    }
+
+    .hero::before {
+        background-size: 200%;
+        /* Diminui a imagem para telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content .button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .hero .ani {
+        font-size: 20px;
+    }
+
+    .hero::before {
+        background-size: 150%;
+        /* Diminui a imagem para telas médias */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Ajusta a grade para uma coluna em telas menores */
+        gap: 40px;
+        /* Reduz o espaçamento entre os cards */
+        padding: 0 10px;
+        /* Adiciona espaçamento lateral */
+    }
+
+    .project-card {
+        width: 100%;
+        /* Faz com que o card ocupe toda a largura disponível */
+        max-width: 100%;
+        /* Remove a largura máxima para garantir a ocupação total */
+        min-height: 350px;
+        /* Ajusta a altura mínima para os cards */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Ajusta a grade para dispositivos médios */
+        gap: 40px;
+        /* Reduz o espaçamento entre os cards */
+        padding: 0 20px;
+        /* Adiciona espaçamento lateral */
+    }
+
+    .project-card {
+        width: 100%;
+        /* Faz com que o card ocupe toda a largura disponível */
+        max-width: 100%;
+        /* Remove a largura máxima para garantir a ocupação total */
+        min-height: 350px;
+        /* Ajusta a altura mínima para os cards */
+    }
+}
+
+@media (min-width: 1025px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        /* Adiciona flexibilidade para a grade */
+        gap: 40px;
+        /* Ajusta o espaçamento entre os cards */
+        justify-content: center;
+        /* Centraliza os cards */
+    }
+
+    .project-card {
+        width: 100%;
+        /* Faz com que o card ocupe toda a largura disponível da coluna */
+        max-width: 400px;
+        /* Define uma largura máxima para o card */
+        min-height: 400px;
+        /* Ajusta a altura mínima para os cards */
+    }
+}
