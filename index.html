@@ -1,22 +1,38 @@
 <!DOCTYPE html>
+<!-- Linguagem do padrão do site -->
 <html lang="PT-br">
 
+
 <head>
+    <!-- Titulo do site -->
+    <title>Mikael Souza - Portifólio</title>
+    <!--favicon (Imagem padrão do navegador)-->
+    <link rel="icon" href="IconNavegador.png" type="image/png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+
+    <!-- Imports CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Import de font -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
+<!-- Corpo da página -->
 <body>
+
+
+    <!-- Header -->
     <header class="header">
         <img src="Logo.png" alt="Logo" class="logo">
     </header>
 
+
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <h1>Bem-vindo ao Meu Portfólio</h1>
@@ -24,13 +40,16 @@
                     class="highlight">ideias</span> em realidade.</p>
             <a href="#about" class="button">SOBRE MIM</a>
         </div>
-        <div class="scroll-indicator"><i class="ani fa-solid fa-chevron-down"></i></div>
+        <div><i class="ani fa-solid fa-chevron-down"></i></div>
     </section>
+
+    <!-- Sobre mim -->
     <section id="about" class="about">
         <h2>SOBRE MIM</h2>
         <p>Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras. Tecnologias:</p>
         <ul class="skills">
-            <li><i class="fab fa-html5"></i> HTML5/CSS3</li>
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3"></i> CSS3</li>
             <li><i class="fab fa-js"></i> JavaScript</li>
             <li><i class="fab fa-react"></i> React.js</li>
             <li><i class="fab fa-react"></i> React Native</li>
@@ -52,6 +71,8 @@
             <button class="BaixarCV">Baixar CV</button>
         </div>
     </section>
+
+    <!-- Meus trabalhos -->
     <section class="portfolio">
         <h2>MEUS TRABALHOS</h2>
         <div class="project-grid">
@@ -85,6 +106,7 @@
     </section>
 
 
+    <!-- Contato -->
     <section class="contact">
         <h2>CONTATO</h2>
         <div class="contact-container">
@@ -99,14 +121,15 @@
                         class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/mikaelsxp/" target="_blank" class="social-icon"><i
                         class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Mikaelsxm" target="_blank" class="social-icon"><i
+                <a href="https://github.com/Mikaelsx" target="_blank" class="social-icon"><i
                         class="fab fa-github"></i></a>
-                <a href="https://wa.me/your-whatsapp-number" target="_blank" class="social-icon"><i
+                <a href="https://wa.me/5511959808230" target="_blank" class="social-icon"><i
                         class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>© 2024 Meu Portfólio. Todos os direitos reservados.</p>
     </footer>

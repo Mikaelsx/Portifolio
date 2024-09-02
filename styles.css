@@ -150,17 +150,20 @@ body {
     font-family: 'Kanit', sans-serif;
     font-size: 14px;
     background-color: #8ed1c4; /* Botão em tom de menta */
-    color: #333;
+    color: #fff;
     border: solid 3px #5aa89a;
     padding: 15px 30px;
     text-decoration: none;
     font-size: 20px;
     margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .BaixarCV:hover {
-  animation: bounce 2s infinite;
-    z-index: 2; /* Garante que o ícone fique acima da imagem de fundo */
+    background-color: #003b46; /* Botão em tom de menta */
+    color: #fff;
+    border: solid 3px #5aa89a;
 }
 
 /* Animation */
